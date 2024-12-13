@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAN Whiteboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <div id="toolbar">
+            <button class="tool" data-color="black" style="background-color: black;"></button>
+            <button class="tool" data-color="red" style="background-color: red;"></button>
+            <button class="tool" data-color="blue" style="background-color: blue;"></button>
+            <button class="tool" data-color="green" style="background-color: green;"></button>
+            <button id="eraser">Eraser</button>
+            <label for="brush-size">Brush Size:</label>
+            <input type="range" id="brush-size" min="1" max="10" value="4">
+            <button id="save-canvas">Save</button>
+            <input type="file" id="upload-canvas" accept="image/*">
+        </div>
+        <div id="whiteboard-container">
+            <canvas id="whiteboard" width="800" height="600"></canvas>
+        </div>
+        <div id="chat">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type a message">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
